@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bài 1: Quản lý Sinh Viên</h1>
+        <div class="row mb-3">
+            <div class="col-4">
+                <input type="text" class="form-control mb-3" id="diemChuan" placeholder="Điểm chuẩn">
+            </div>
+            <div class="col-4">
+                <div class="input-group mb-3">
+                    <select class="form-select" id="khuVuc">
+                        <option selected>Chọn khu vực</option>
+                        <option value="0">Không thuộc khu vực nào</option>
+                        <option value="2">Khu vực A</option>
+                        <option value="1">Khu vực B</option>
+                        <option value="0.5">Khu vực C</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="input-group mb-3">
+                    <select class="form-select" id="doiTuong">
+                        <option selected>Chọn đối tượng</option>
+                        <option value="0">Không thuộc đối tượng nào</option>
+                        <option value="2.5">Đối tượng 1</option>
+                        <option value="1.5">Đối tượng 2</option>
+                        <option value="1">Đối tượng 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control mb-3" id="diemMon1" placeholder="Điểm môn thứ 1">
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control mb-3" id="diemMon2" placeholder="Điểm môn thứ 2">
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control mb-3" id="diemMon3" placeholder="Điểm môn thứ 3">
+            </div>
+        </div>
+        <button class="btn btn-success text-white" onclick="xetDiemChuan()">
+            Bắt đầu xét
+        </button>
+        <div class="bg-info bg-opacity-75 p-2 mt-3 bai1"></div>
+
+    </div>
+
+    <hr>
+    <div class="container">
+        <h1>Bài 2: Tính tiền điện</h1>
+        <div class="row mb-3">
+            <div class="col-6">
+                <input type="text" class="form-control mb-3" id="ten" placeholder="Nhập Tên">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control mb-3" id="soKw" placeholder="Nhập số Kw">
+            </div>
+        </div>
+        <button class="btn btn-success text-white" onclick="tinhTienDien()">
+            Tính tiền điện
+        </button>
+        <div class="bg-info bg-opacity-75 p-2 mt-3 bai2"></div>
+    </div>
+
+    <hr>
+    <div class="container">
+        <h1>Bài 3: Tính thuế thu nhập cá nhân</h1>
+        <div class="row mb-3">
+            <div class="col-4">
+                <input type="text" class="form-control mb-3" id="tenNguoi" placeholder="Nhập Tên">
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control mb-3" id="tongThuNhap" placeholder="Tổng thu nhập năm">
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control mb-3" id="soNguoiPT" placeholder="Số người phụ thuộc">
+            </div>
+        </div>
+        <button class="btn btn-success text-white" onclick="tinhTienThue()">
+            Tính tiền thuế
+        </button>
+        <div class="bg-info bg-opacity-75 p-2 mt-3 bai3"></div>
+    </div>
+
+    <hr>
+    <div class="container">
+        <h1>Bài 4: Tính tiền cáp</h1>
+        <div class="row mb-3">
+            <div class="col-4">
+                <div class="input-group">
+                    <select class="form-select" id="loaiKH" onchange="chonLoaiKH()">
+                        <option selected>Chọn khu vực</option>
+                        <option value="1">Nhà dân</option>
+                        <option value="2">Doanh nghiệp</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control mb-3" id="maKH" placeholder="Nhập mã KH">
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control mb-3" id="soKenhCC" placeholder="Số kênh cao cấp">
+            </div>
+            <div class="col-4 ">
+                <input type="text" class="form-control mb-3 soKNT disabled" id="soKN" placeholder="Số kết nối">
+            </div>
+        </div>
+        <button class="btn btn-success text-white" onclick="tinhTienCap()">
+            Tính tiền cáp
+        </button>
+        <div class="bg-info bg-opacity-75 p-2 mt-3 bai4"></div>
+    </div>
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
